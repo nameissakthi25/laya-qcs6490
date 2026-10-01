@@ -73,8 +73,9 @@ docs/        RECIPE.md (reproducible conversion), BENCHMARK.md (results + method
 The quantized encoder DLCs are published on the Hugging Face Hub:
 **https://huggingface.co/nameissakthi/laya-qcs6490-encoder**
 (`laya_encoder_mm.dlc` for 128-token min-max, `laya_encoder_256_sqnr.dlc` for 256-token sqnr, plus the
-`mask_only_*.onnx` host helpers). The HTP **context binaries** are board- and QAIRT-version-specific;
-regenerate them from the DLCs with `qnn-context-binary-generator` (see [`docs/RECIPE.md`](docs/RECIPE.md)).
+`mask_only_*.onnx` host helpers). Pre-built HTP **context binaries** for QCS6490 + QAIRT 2.37.1 are
+included there under `ctx/`; for any other V68/QAIRT version, regenerate them from the DLCs with
+`qnn-context-binary-generator` (see [`docs/RECIPE.md`](docs/RECIPE.md)).
 
 ## Credits
 Model: [Convai Innovations — Laya](https://huggingface.co/convaiinnovations/laya) (Apache-2.0).
